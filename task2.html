@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #match , #notmatch{
+            display:none;
+
+        }
+    </style>
+</head>
+<body>
+    <input type="password" id="inp1" placeholder="please enter your password"><br>
+   <input type="password" id="inp2" placeholder="please reenter your password"><br>
+   <div id="notmatch" style="color: red;" >Password doesnot matched </div>
+   <div id="match" style="color: green;" >Password matched </div>
+
+   <button id="button">submit</button>
+
+
+
+   <script>
+    var inp1=document.getElementById('inp1')
+    var inp2=document.getElementById('inp2')
+    var divmatch=document.getElementById('match')
+    var divnotmatch=document.getElementById('notmatch')
+    
+    var btn=document.getElementById('button')
+
+
+    btn.addEventListener('click',function(){
+        if(inp1.value==inp2.value){
+            divmatch.style.display='block'
+            divnotmatch.style.display='none'
+
+        }
+        else{
+            divnotmatch.style.display='block'
+            divmatch.style.display='none'
+
+        }
+
+        
+
+    })
+
+
+
+
+   </script>
+</body>
+</html>

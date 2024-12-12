@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #match{
+            display:none;
+            color: green;
+
+        }
+    </style>
+</head>
+<body>
+    <input type="mail" id="inp1" placeholder="please enter your email"><br><br>
+   <input type="password" id="inp2" placeholder="please enter your password"><br><br>
+   <div id="match"  >Strong Password, Form submitted successfully. </div><br>
+   
+   <button id="button">submit</button>
+
+
+
+   <script>
+    var inp1=document.getElementById('inp1')
+    var inp2=document.getElementById('inp2')
+    var divmatch=document.getElementById('match')
+    var btn=document.getElementById('button')
+
+
+    btn.addEventListener('click',function(){
+        if(inp2.value.length<5){
+            alert('Its a weak password ')
+            divmatch.style.display='none'
+
+            
+        }
+        
+        else if (inp2.value.length<8){
+            alert('Is a medium password')
+            divmatch.style.display='none'
+
+            
+
+        }
+        else{
+            divmatch.style.display='block'
+              
+        }
+        inp1.value=''
+        inp2.value=''
+        setTimeout(function () {
+            divMatch.style.display = 'none';
+        }, 2000); 
+        
+        
+          
+
+    })
+
+
+
+
+   </script>
+</body>
+</html>
